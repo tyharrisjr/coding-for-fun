@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="4"
+            failures="1"
+            tests="1">
+
+  <testsuite name="mobile-app-tests.wikipedia-android"
+    errors="4" failures="1" hostname="" id="" package="mobile-app-tests" skipped="0"
+    tests="1" time="46.13" timestamp="">
+  
+    <testcase name="Search for BrowserStack" classname="mobile-app-tests.wikipedia-android" time="20.34" assertions="1">  <failure message="Testing if element&#39;s &lt;.pcs-edit-section-title&gt; inner text equals &#39;BrowserStack&#39; in 5000ms - expected &#34;equals &#39;BrowserStack&#39;&#34; but got: &#34;element could not be located&#34; (5125ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/tjharris/Coding/nightwatch-for-play/nightwatch/examples/mobile-app-tests/wikipedia-android.js:18:15)</failure>
+
+    
+    <error message="Testing if element&#39;s [33m&lt;.pcs-edit-section-title&gt;[39m inner text equals [33m&#39;BrowserStack&#39;[39m in 5000ms - expected [32m&#34;equals &#39;BrowserStack&#39;&#34;[39m but got: [31m&#34;element could not be located&#34;[39m [90m(5125ms)[39m" type="error"><![CDATA[
+    Error
+    at Proxy.&lt;anonymous&gt; (/Users/tjharris/Coding/nightwatch-for-play/node_modules/nightwatch/lib/api/index.js:161:30)
+    at DescribeInstance.&lt;anonymous&gt; (/Users/tjharris/Coding/nightwatch-for-play/nightwatch/examples/mobile-app-tests/wikipedia-android.js:18:15)
+    at Context.call (/Users/tjharris/Coding/nightwatch-for-play/node_modules/nightwatch/lib/testsuite/context.js:515:35)
+    at TestCase.run (/Users/tjharris/Coding/nightwatch-for-play/node_modules/nightwatch/lib/testsuite/testcase.js:58:31)
+    at Runnable.__runFn (/Users/tjharris/Coding/nightwatch-for-play/node_modules/nightwatch/lib/testsuite/index.js:839:80)
+    at Runnable.run (/Users/tjharris/Coding/nightwatch-for-play/node_modules/nightwatch/lib/testsuite/runnable.js:126:21)
+    at TestSuite.executeRunnable (/Users/tjharris/Coding/nightwatch-for-play/node_modules/nightwatch/lib/testsuite/index.js:1000:49)
+    at TestSuite.handleRunnable (/Users/tjharris/Coding/nightwatch-for-play/node_modules/nightwatch/lib/testsuite/index.js:1015:33)
+    at /Users/tjharris/Coding/nightwatch-for-play/node_modules/nightwatch/lib/testsuite/index.js:839:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    ]]></error>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+       NoSuchElementError
+   Unable to locate element: #hdtb-msb using css selector
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+ NoSuchElementError
+   An error occurred while running .click() command on &lt;org.wikipedia:id/fragment_onboarding_skip_button&gt;: Timed out while waiting for element &#34;org.wikipedia:id/fragment_onboarding_skip_button&#34; with &#34;id&#34; to be present for 5000 milliseconds.
+    {&#34;error&#34;:{&#34;name&#34;:&#34;InvalidArgumentError&#34;,&#34;remoteStacktrace&#34;:&#34;&#34;},&#34;status&#34;:-1,&#34;value&#34;:null}
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    /Users/tjharris/Coding/nightwatch-for-play/nightwatch/examples/mobile-app-tests/wikipedia-android.js:3
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     1 | describe(&#39;Wikipedia Android app test&#39;, function() {
+     2 |   before(function(app) {
+     3 |     app.click(&#39;id&#39;, &#39;org.wikipedia:id/fragment_onboarding_skip_button&#39;); 
+     4 |   });
+     5 | 
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ NoSuchElementError
+   An error occurred while running .click() command on &lt;org.wikipedia:id/search_container&gt;: Timed out while waiting for element &#34;org.wikipedia:id/search_container&#34; with &#34;id&#34; to be present for 5000 milliseconds.
+    {&#34;error&#34;:{&#34;name&#34;:&#34;InvalidArgumentError&#34;,&#34;remoteStacktrace&#34;:&#34;&#34;},&#34;status&#34;:-1,&#34;value&#34;:null}
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    /Users/tjharris/Coding/nightwatch-for-play/nightwatch/examples/mobile-app-tests/wikipedia-android.js:8
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     6 |   it(&#39;Search for BrowserStack&#39;, async function(app) {
+     7 |     app
+     8 |       .click(&#39;id&#39;, &#39;org.wikipedia:id/search_container&#39;) 
+     9 |       .sendKeys(&#39;id&#39;, &#39;org.wikipedia:id/search_src_text&#39;, &#39;browserstack&#39;)
+     10 |       .click({selector: &#39;org.wikipedia:id/page_list_item_title&#39;, locateStrategy: &#39;id&#39;, index: 0})
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ NoSuchElementError
+   An error occurred while running .sendKeys() command on &lt;org.wikipedia:id/search_src_text&gt;: Timed out while waiting for element &#34;org.wikipedia:id/search_src_text&#34; with &#34;id&#34; to be present for 5000 milliseconds.
+    {&#34;error&#34;:{&#34;name&#34;:&#34;InvalidArgumentError&#34;,&#34;remoteStacktrace&#34;:&#34;&#34;},&#34;status&#34;:-1,&#34;value&#34;:null}
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    /Users/tjharris/Coding/nightwatch-for-play/nightwatch/examples/mobile-app-tests/wikipedia-android.js:9
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     7 |     app
+     8 |       .click(&#39;id&#39;, &#39;org.wikipedia:id/search_container&#39;)
+     9 |       .sendKeys(&#39;id&#39;, &#39;org.wikipedia:id/search_src_text&#39;, &#39;browserstack&#39;) 
+     10 |       .click({selector: &#39;org.wikipedia:id/page_list_item_title&#39;, locateStrategy: &#39;id&#39;, index: 0})
+     11 |       .waitUntil(async function() {
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ NoSuchElementError
+   An error occurred while running .click() command on &lt;org.wikipedia:id/page_list_item_title&gt;: Timed out while waiting for element &#34;org.wikipedia:id/page_list_item_title&#34; with &#34;id&#34; to be present for 5000 milliseconds.
+    {&#34;error&#34;:{&#34;name&#34;:&#34;InvalidArgumentError&#34;,&#34;remoteStacktrace&#34;:&#34;&#34;},&#34;status&#34;:-1,&#34;value&#34;:null}
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    /Users/tjharris/Coding/nightwatch-for-play/nightwatch/examples/mobile-app-tests/wikipedia-android.js:10
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     8 |       .click(&#39;id&#39;, &#39;org.wikipedia:id/search_container&#39;)
+     9 |       .sendKeys(&#39;id&#39;, &#39;org.wikipedia:id/search_src_text&#39;, &#39;browserstack&#39;)
+     10 |       .click({selector: &#39;org.wikipedia:id/page_list_item_title&#39;, locateStrategy: &#39;id&#39;, index: 0}) 
+     11 |       .waitUntil(async function() {
+     12 |         // wait for webview context to be available
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
